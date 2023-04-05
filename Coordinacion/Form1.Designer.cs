@@ -44,6 +44,8 @@
             button1 = new Button();
             pictureBox1 = new PictureBox();
             PanelControlador = new Panel();
+            panel5 = new Panel();
+            button5 = new Button();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).BeginInit();
@@ -108,6 +110,8 @@
             // 
             BarraLateral.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             BarraLateral.BackColor = Color.FromArgb(26, 32, 50);
+            BarraLateral.Controls.Add(panel5);
+            BarraLateral.Controls.Add(button5);
             BarraLateral.Controls.Add(panel4);
             BarraLateral.Controls.Add(panel3);
             BarraLateral.Controls.Add(button4);
@@ -240,6 +244,31 @@
             PanelControlador.Size = new Size(1050, 715);
             PanelControlador.TabIndex = 2;
             // 
+            // panel5
+            // 
+            panel5.BackColor = Color.FromArgb(56, 9, 120);
+            panel5.Location = new Point(0, 372);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(7, 38);
+            panel5.TabIndex = 5;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(26, 32, 50);
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 9, 120);
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.White;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleLeft;
+            button5.Location = new Point(6, 372);
+            button5.Name = "button5";
+            button5.Size = new Size(238, 38);
+            button5.TabIndex = 6;
+            button5.Text = "Reportes";
+            button5.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -278,5 +307,7 @@
         private Panel panel3;
         private Button button4;
         private Button button3;
+        private Panel panel5;
+        private Button button5;
     }
 }
