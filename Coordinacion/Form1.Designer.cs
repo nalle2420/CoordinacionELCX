@@ -34,16 +34,16 @@
             btnMaximizar = new PictureBox();
             btnMinimizar = new PictureBox();
             BarraLateral = new Panel();
+            panel4 = new Panel();
+            panel3 = new Panel();
+            button4 = new Button();
+            button3 = new Button();
+            panel2 = new Panel();
+            button2 = new Button();
             panel1 = new Panel();
             button1 = new Button();
             pictureBox1 = new PictureBox();
             PanelControlador = new Panel();
-            button2 = new Button();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            button3 = new Button();
-            panel4 = new Panel();
-            button4 = new Button();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).BeginInit();
@@ -63,6 +63,7 @@
             BarraTitulo.Name = "BarraTitulo";
             BarraTitulo.Size = new Size(1300, 35);
             BarraTitulo.TabIndex = 0;
+            BarraTitulo.MouseDown += BarraTitulo_MouseDown;
             // 
             // btnCerrar
             // 
@@ -121,6 +122,82 @@
             BarraLateral.Size = new Size(250, 715);
             BarraLateral.TabIndex = 1;
             // 
+            // panel4
+            // 
+            panel4.BackColor = Color.FromArgb(56, 9, 120);
+            panel4.Location = new Point(0, 308);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(7, 38);
+            panel4.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(56, 9, 120);
+            panel3.Location = new Point(0, 248);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(7, 38);
+            panel3.TabIndex = 3;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(26, 32, 50);
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 9, 120);
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.White;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.ImageAlign = ContentAlignment.MiddleLeft;
+            button4.Location = new Point(6, 308);
+            button4.Name = "button4";
+            button4.Size = new Size(238, 38);
+            button4.TabIndex = 4;
+            button4.Text = "Contratos";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(26, 32, 50);
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 9, 120);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(6, 248);
+            button3.Name = "button3";
+            button3.Size = new Size(238, 38);
+            button3.TabIndex = 4;
+            button3.Text = "Usuarios";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(56, 9, 120);
+            panel2.Location = new Point(0, 185);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(7, 38);
+            panel2.TabIndex = 1;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(26, 32, 50);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 9, 120);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(6, 185);
+            button2.Name = "button2";
+            button2.Size = new Size(238, 38);
+            button2.TabIndex = 2;
+            button2.Text = "Inventario";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(56, 9, 120);
@@ -162,82 +239,6 @@
             PanelControlador.Name = "PanelControlador";
             PanelControlador.Size = new Size(1050, 715);
             PanelControlador.TabIndex = 2;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(26, 32, 50);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 9, 120);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(6, 185);
-            button2.Name = "button2";
-            button2.Size = new Size(238, 38);
-            button2.TabIndex = 2;
-            button2.Text = "Inventario";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(56, 9, 120);
-            panel2.Location = new Point(0, 185);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(7, 38);
-            panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(56, 9, 120);
-            panel3.Location = new Point(0, 248);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(7, 38);
-            panel3.TabIndex = 3;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.FromArgb(26, 32, 50);
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 9, 120);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(6, 248);
-            button3.Name = "button3";
-            button3.Size = new Size(238, 38);
-            button3.TabIndex = 4;
-            button3.Text = "Usuarios";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.FromArgb(56, 9, 120);
-            panel4.Location = new Point(0, 308);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(7, 38);
-            panel4.TabIndex = 3;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.FromArgb(26, 32, 50);
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 9, 120);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(6, 308);
-            button4.Name = "button4";
-            button4.Size = new Size(238, 38);
-            button4.TabIndex = 4;
-            button4.Text = "Contratos";
-            button4.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
