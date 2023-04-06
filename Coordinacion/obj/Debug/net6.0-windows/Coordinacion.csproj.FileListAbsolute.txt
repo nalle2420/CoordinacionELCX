@@ -16,3 +16,4 @@ C:\Users\nalle\source\repos\Coordinacion\Coordinacion\obj\Debug\net6.0-windows\r
 C:\Users\nalle\source\repos\Coordinacion\Coordinacion\obj\Debug\net6.0-windows\Coordinacion.pdb
 C:\Users\nalle\source\repos\Coordinacion\Coordinacion\obj\Debug\net6.0-windows\Coordinacion.genruntimeconfig.cache
 C:\Users\nalle\source\repos\Coordinacion\Coordinacion\obj\Debug\net6.0-windows\ref\Coordinacion.dll
+C:\Users\nalle\source\repos\Coordinacion\Coordinacion\obj\Debug\net6.0-windows\Coordinacion.Coordinación.resources

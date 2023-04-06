@@ -48,5 +48,24 @@ namespace Coordinacion
         {
             Application.Exit();
         }
+
+        private void AbrirFormHijo(object formHijo)
+        {
+            if (this.PanelControlador.Controls.Count > 0)
+            {
+                this.PanelControlador.Controls.RemoveAt(0);
+            }
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.PanelControlador.Controls.Add(fh);
+            this.PanelControlador.Tag = fh;
+            fh.Show();
+        }
+
+        private void btnCoordinacion_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new Coordinación());
+        }
     }
 }
