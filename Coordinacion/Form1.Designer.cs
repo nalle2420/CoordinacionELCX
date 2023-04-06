@@ -34,6 +34,8 @@
             btnMaximizar = new PictureBox();
             btnMinimizar = new PictureBox();
             BarraLateral = new Panel();
+            panel5 = new Panel();
+            button5 = new Button();
             panel4 = new Panel();
             panel3 = new Panel();
             button4 = new Button();
@@ -44,14 +46,14 @@
             button1 = new Button();
             pictureBox1 = new PictureBox();
             PanelControlador = new Panel();
-            panel5 = new Panel();
-            button5 = new Button();
+            pictureBox2 = new PictureBox();
             BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             BarraLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // BarraTitulo
@@ -110,6 +112,7 @@
             // 
             BarraLateral.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             BarraLateral.BackColor = Color.FromArgb(26, 32, 50);
+            BarraLateral.Controls.Add(pictureBox2);
             BarraLateral.Controls.Add(panel5);
             BarraLateral.Controls.Add(button5);
             BarraLateral.Controls.Add(panel4);
@@ -125,6 +128,31 @@
             BarraLateral.Name = "BarraLateral";
             BarraLateral.Size = new Size(250, 715);
             BarraLateral.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.FromArgb(56, 9, 120);
+            panel5.Location = new Point(0, 372);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(7, 38);
+            panel5.TabIndex = 5;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(26, 32, 50);
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 9, 120);
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.White;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleLeft;
+            button5.Location = new Point(6, 372);
+            button5.Name = "button5";
+            button5.Size = new Size(238, 38);
+            button5.TabIndex = 6;
+            button5.Text = "Reportes";
+            button5.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -244,30 +272,16 @@
             PanelControlador.Size = new Size(1050, 715);
             PanelControlador.TabIndex = 2;
             // 
-            // panel5
+            // pictureBox2
             // 
-            panel5.BackColor = Color.FromArgb(56, 9, 120);
-            panel5.Location = new Point(0, 372);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(7, 38);
-            panel5.TabIndex = 5;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(26, 32, 50);
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(56, 9, 120);
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.White;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(6, 372);
-            button5.Name = "button5";
-            button5.Size = new Size(238, 38);
-            button5.TabIndex = 6;
-            button5.Text = "Reportes";
-            button5.UseVisualStyleBackColor = false;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(0, 646);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(83, 69);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // Form1
             // 
@@ -287,6 +301,7 @@
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).EndInit();
             BarraLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -309,5 +324,6 @@
         private Button button3;
         private Panel panel5;
         private Button button5;
+        private PictureBox pictureBox2;
     }
 }
