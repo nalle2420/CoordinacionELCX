@@ -30,7 +30,7 @@ namespace Coordinacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            AbrirFormHijo(new DatosGenerales());
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -49,7 +49,7 @@ namespace Coordinacion
             Application.Exit();
         }
 
-        private void AbrirFormHijo(object formHijo)
+        public void AbrirFormHijo(object formHijo)
         {
             if (this.PanelControlador.Controls.Count > 0)
             {
