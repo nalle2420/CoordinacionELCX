@@ -191,7 +191,7 @@
             textBox5.Location = new Point(485, 237);
             textBox5.Margin = new Padding(3, 4, 3, 4);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(429, 27);
+            textBox5.Size = new Size(485, 27);
             textBox5.TabIndex = 15;
             // 
             // label6
