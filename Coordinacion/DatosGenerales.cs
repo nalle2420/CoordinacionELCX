@@ -21,5 +21,10 @@ namespace Coordinacion
         {
 
         }
+
+        private void DatosGenerales_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

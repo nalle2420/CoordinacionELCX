@@ -31,7 +31,7 @@ namespace Coordinacion
         {
 
         }
-       
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ((Form1)this.ParentForm).AbrirFormularioHijo(typeof(DatosGenerales));
