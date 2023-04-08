@@ -31,12 +31,10 @@ namespace Coordinacion
         {
 
         }
-
+       
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            DatosGenerales datos = new DatosGenerales();
-            Form1 form1 = new Form1();
-            form1.AbrirFormHijo(datos);
+            ((Form1)this.ParentForm).AbrirFormularioHijo(typeof(DatosGenerales));
         }
     }
 }

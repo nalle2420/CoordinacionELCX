@@ -30,7 +30,7 @@ namespace Coordinacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new DatosGenerales());
+            AbrirFormularioHijo(typeof(DatosGenerales));
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -49,23 +49,48 @@ namespace Coordinacion
             Application.Exit();
         }
 
-        public void AbrirFormHijo(object formHijo)
+        private Form formularioHijoActual;
+
+        public void AbrirFormularioHijo(Type tipoFormulario)
         {
-            if (this.PanelControlador.Controls.Count > 0)
+            // Verificar si ya hay un formulario hijo abierto
+            if (formularioHijoActual != null)
             {
-                this.PanelControlador.Controls.RemoveAt(0);
+                formularioHijoActual.Close();
             }
-            Form fh = formHijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.PanelControlador.Controls.Add(fh);
-            this.PanelControlador.Tag = fh;
-            fh.Show();
+
+            // Crear y abrir el nuevo formulario hijo en el contenedor
+            Form nuevoFormularioHijo = (Form)Activator.CreateInstance(tipoFormulario);
+            nuevoFormularioHijo.TopLevel = false;
+            nuevoFormularioHijo.FormBorderStyle = FormBorderStyle.None;
+            nuevoFormularioHijo.Dock = DockStyle.Fill;
+            PanelControlador.Controls.Add(nuevoFormularioHijo);
+            PanelControlador.Tag = nuevoFormularioHijo;
+            nuevoFormularioHijo.BringToFront();
+            nuevoFormularioHijo.Show();
+
+            // Actualizar el formulario hijo actual
+            formularioHijoActual = nuevoFormularioHijo;
         }
+
+
+        /* public void AbrirFormHijo(object formHijo)
+         {
+             if (this.PanelControlador.Controls.Count > 0)
+             {
+                 this.PanelControlador.Controls.RemoveAt(0);
+             }
+             Form fh = formHijo as Form;
+             fh.TopLevel = false;
+             fh.Dock = DockStyle.Fill;
+             this.PanelControlador.Controls.Add(fh);
+             this.PanelControlador.Tag = fh;
+             fh.Show();
+         }*/
 
         private void btnCoordinacion_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new Coordinación());
+            AbrirFormularioHijo(typeof(Coordinación));
         }
     }
 }
