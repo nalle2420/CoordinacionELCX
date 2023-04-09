@@ -10,5 +10,8 @@
     <Compile Update="Coordinación.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Software.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
